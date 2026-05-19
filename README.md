@@ -44,29 +44,48 @@ healing-sip-wellness-api/
 │
 ├── README.md
 └── requirements.txt
+```
 
-API Endpoints
-Method	               Endpoint	                           Description
-GET	              /	                                       Welcome message
-GET	             /appointments	                           Get all appointments
-GET	            /appointments/{appointment_id}	           Get one appointment
-POST	       /appointments	                           Create a new appointment
-PUT	          /appointments/{appointment_id}/status	       Update appointment status
-DELETE	     /appointments/{appointment_id}	               Delete an appointment
+## API Endpoints
 
-How to Run This Project
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/` | Welcome message |
+| GET | `/appointments` | Get all appointments |
+| GET | `/appointments/{appointment_id}` | Get one appointment |
+| POST | `/appointments` | Create a new appointment |
+| PUT | `/appointments/{appointment_id}/status` | Update appointment status |
+| DELETE | `/appointments/{appointment_id}` | Delete an appointment |
+
+## How to Run This Project
+
 1. Install the required packages:
+
+```bash
 pip install -r requirements.txt
+```
 
 2. Start the API server:
+
+```bash
 uvicorn app.main:app --reload
-           or
+```
+
+or:
+
+```bash
 python -m uvicorn app.main:app --reload
+```
 
 3. Open the API documentation:
-http://127.0.0.1:8000/docs
 
-Sample Appointment data
+```text
+http://127.0.0.1:8000/docs
+```
+
+## Sample Appointment Data
+
+```json
 {
   "id": 3,
   "client_name": "Blessing Fortune",
@@ -77,25 +96,27 @@ Sample Appointment data
   "concern": "Needs support with wellness routine and energy balance",
   "status": "Pending"
 }
+```
 
-What I Demonstrated
+## What I Demonstrated
 
 Through this project, I demonstrated my ability to:
-Build a backend API using FastAPI
-Create API endpoints
-Use Pydantic models for data validation
-Handle basic errors with HTTP exceptions
-Work with JSON data
-Structure a backend project professionally
-Document an API project clearly for GitHub
 
-Future Improvements
+- Build a backend API using FastAPI
+- Create API endpoints
+- Use Pydantic models for data validation
+- Handle basic errors with HTTP exceptions
+- Work with JSON data
+- Structure a backend project professionally
+- Document an API project clearly for GitHub
+
+## Future Improvements
 
 In the future, I would like to:
-Connect the API to a database
-Add user authentication
-Add appointment reminders
-Add service categories
-Add admin dashboard functionality
-Deploy the API online
 
+- Connect the API to a database
+- Add user authentication
+- Add appointment reminders
+- Add service categories
+- Add admin dashboard functionality
+- Deploy the API online
